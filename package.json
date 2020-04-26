@@ -1,0 +1,30 @@
+{
+  "name": "react-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "Start": "if-env Node_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start", 
+    "start:dev": "concurrently \"cd server && npm run watch\" \" cd client && run npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evan2801/react-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evan2801/react-3/issues"
+  },
+  "homepage": "https://github.com/evan2801/react-3#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
