@@ -20,6 +20,12 @@ const bookSchema = new Schema ({
      type: String,
      required: true,
   },
+  //save book by id from google books
+  bookId:{
+    type: String,
+    required: true,
+    unique: true, 
+  },
   image: {
      type: String,
   },
